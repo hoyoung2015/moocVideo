@@ -43,7 +43,8 @@ public class MoocClassify {
 				}
 				String ext = file.getName().substring(file.getName().lastIndexOf(".")+1);
 				System.out.println(ext);
-				file.renameTo(new File(videoDir,item.getName().replace(" ", "")+"."+ext));
+				System.err.println(videoDir+"/"+item.getName().replace(" ", "")+"."+ext);
+				file.renameTo(new File(videoDir+"/"+item.getName().replace(" ", "")+"."+ext));
 			}
 		}
 		System.out.println("结束！");

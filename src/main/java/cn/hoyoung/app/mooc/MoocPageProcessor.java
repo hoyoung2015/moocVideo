@@ -63,7 +63,7 @@ public class MoocPageProcessor  implements PageProcessor{
 		String baseUrl = "http://www.imooc.com/course/list";
 		Spider spider = Spider.create(new MoocPageProcessor());
 		spider.addUrl(baseUrl);
-		for(int i=2;i<=18;i++){
+		for(int i=1;i<=19;i++){
 			spider.addUrl(baseUrl+"?page="+i);
 		}
 		session.getTransaction().begin();
